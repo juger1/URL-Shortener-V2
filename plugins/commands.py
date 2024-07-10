@@ -221,7 +221,7 @@ async def shortener_api_handler(bot, m: Message):
     elif len(cmd) == 2:
         api = cmd[1].strip()
         await update_user_info(user_id, {"shortener_api": api})
-        await m.reply(f"Shortener API updated successfully to {api}")
+        await m.reply(f"<b>Shortener API updated successfully to </b>\n<code>{api}</code>")
 
 
 @Client.on_message(filters.command("header") & filters.private)
@@ -335,7 +335,7 @@ async def shortener_site_handler(bot, m: Message):
         if not domain(shortener_site):
             return await m.reply(text=text, disable_web_page_preview=True)
         await update_user_info(user_id, {"shortener_site": shortener_site})
-        await m.reply("Base Site updated successfully")
+        await m.reply("<b>Base Site updated successfully</b>")
 
 
 @Client.on_message(filters.command("me") & filters.private)

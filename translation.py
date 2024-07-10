@@ -189,7 +189,7 @@ SHORTENER_API_MESSAGE = """To add or update your Shortner Website API,
             
 Ex: `/shortener_api 6LZq851sXofffPHugiKQq`
 
-Current Website: {shortener_site}
+<b>Current Website:</b> {shortener_site}
 
 To change your Shortener Website: /shortener_site
 
