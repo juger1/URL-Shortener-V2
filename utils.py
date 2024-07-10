@@ -187,8 +187,8 @@ async def mdisk_api_handler(user, text, alias=""):
 
 async def replace_link(user, text, alias=""):
     api_key = user["shortener_api"]
-    base_site = user["base_site"]
-    shortzy = Shortzy(api_key, base_site)
+    shortener_site = user["shortener_site"]
+    shortzy = Shortzy(api_key, shortener_site)
     links = await extract_link(text)
 
     for link in links:
@@ -354,12 +354,12 @@ async def user_api_check(user):
             return "\n\nSet your /mdisk_api to continue..."
     elif user_method == "shortener":
         if not user["shortener_api"]:
-            return f"\n\nSet your /shortener_api to continue...\nCurrent Website {user['base_site']}"
+            return f"\n\nSet your /shortener_api to continue...\nCurrent Website {user['shortener_site']}"
     elif user_method == "mdlink":
         if not user["mdisk_api"]:
             return "\n\nSet your /mdisk_api to continue..."
         if not user["shortener_api"]:
-            return f"\n\nSet your /shortener_api to continue...\nCurrent Website {user['base_site']}"
+            return f"\n\nSet your /shortener_api to continue...\nCurrent Website {user['shortener_site']}"
     else:
         return "\n\nSet your /method first"
     return True
@@ -390,7 +390,7 @@ async def set_commands(app):
         BotCommand("username", "Sets the username to replace others."),
         BotCommand("banner_image", "Sets the banner image."),
         BotCommand("me", "Displays information about the bot."),
-        BotCommand("base_site", "Changes the base site."),
+        BotCommand("shortener_site", "Changes the shortener site."),
         BotCommand("include_domain", "Sets the included domain."),
         BotCommand("exclude_domain", "Sets the excluded domain."),
         BotCommand("stats", "Displays statistics of the server and bot."),

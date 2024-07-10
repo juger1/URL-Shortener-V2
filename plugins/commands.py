@@ -27,7 +27,7 @@ user_commands = [
     "footer",
     "username",
     "banner_image",
-    "base_site",
+    "shortener_site",
     "me",
 ]
 avl_web = [
@@ -66,7 +66,7 @@ async def start(c: Client, m: Message):
         )
     new_user = await get_user(m.from_user.id)
     t = START_MESSAGE.format(
-        m.from_user.mention, new_user["method"], new_user["base_site"]
+        m.from_user.mention, new_user["method"], new_user["shortener_site"]
     )
 
     if WELCOME_IMAGE:
@@ -121,7 +121,7 @@ async def method_handler(c: Client, m: Message):
     user = await get_user(user_id)
     cmd = m.command
     if len(cmd) == 1:
-        s = METHOD_MESSAGE.format(method=user["method"], shortener=user["base_site"])
+        s = METHOD_MESSAGE.format(method=user["method"], shortener=user["shortener_site"])
         return await m.reply(s, reply_markup=METHOD_REPLY_MARKUP)
     elif len(cmd) == 2:
         method = cmd[1]
@@ -214,7 +214,7 @@ async def shortener_api_handler(bot, m: Message):
     cmd = m.command
     if len(cmd) == 1:
         s = SHORTENER_API_MESSAGE.format(
-            base_site=user["base_site"], shortener_api=user["shortener_api"]
+            shortener_site=user["shortener_site"], shortener_api=user["shortener_api"]
         )
 
         return await m.reply(s)
@@ -320,21 +320,21 @@ async def banner_image_handler(bot, m: Message):
                 return await m.reply_text("Image URL is Invalid")
 
 
-@Client.on_message(filters.command("base_site") & filters.private)
+@Client.on_message(filters.command("shortener_site") & filters.private)
 @private_use
-async def base_site_handler(bot, m: Message):
+async def shortener_site_handler(bot, m: Message):
     user_id = m.from_user.id
     user = await get_user(user_id)
     cmd = m.command
-    site = user["base_site"]
-    text = f"`/base_site (base_site)`\n\nCurrent base site: {site}\n\n EX: `/base_site shareus.in`\n\nAvailable base sites:\n{avl_web1}\nAnd All alternate sites to droplink.co"
+    site = user["shortener_site"]
+    text = f"`/shortener_site (shortener_site)`\n\nCurrent base site: {site}\n\n EX: `/shortener_site shareus.in`\n\nAvailable base sites:\n{avl_web1}\nAnd All alternate sites to droplink.co"
     if len(cmd) == 1:
         return await m.reply(text=text, disable_web_page_preview=True)
     elif len(cmd) == 2:
-        base_site = cmd[1].strip()
-        if not domain(base_site):
+        shortener_site = cmd[1].strip()
+        if not domain(shortener_site):
             return await m.reply(text=text, disable_web_page_preview=True)
-        await update_user_info(user_id, {"base_site": base_site})
+        await update_user_info(user_id, {"shortener_site": shortener_site})
         await m.reply("Base Site updated successfully")
 
 
@@ -347,7 +347,7 @@ async def me_handler(bot, m: Message):
     user_id = m.from_user.id
     user = await get_user(user_id)
     res = USER_ABOUT_MESSAGE.format(
-        base_site=user["base_site"],
+        shortener_site=user["shortener_site"],
         method=user["method"],
         shortener_api=user["shortener_api"],
         mdisk_api=user["mdisk_api"],
@@ -513,7 +513,7 @@ async def get_user_info_handler(c: Client, m: Message):
         if not user:
             return await m.reply_text("User doesn't exist")
         res = USER_ABOUT_MESSAGE.format(
-            base_site=user["base_site"],
+            shortener_site=user["shortener_site"],
             method=user["method"],
             shortener_api="This is something secret",
             mdisk_api="This is something secret",

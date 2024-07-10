@@ -154,11 +154,11 @@ BACK_REPLY_MARKUP = InlineKeyboardMarkup(
 USER_ABOUT_MESSAGE = """
 🔧 Here are the current settings for this bot:
 
-- 🌐 Shortener website: {base_site}
+- 🌐 Shortener website: {shortener_site}
 
 - 🧰 Method: {method}
 
-- 🔌 {base_site} API: {shortener_api}
+- 🔌 {shortener_site} API: {shortener_api}
 
 - 💾 Mdisk API: {mdisk_api}
 
@@ -189,9 +189,9 @@ SHORTENER_API_MESSAGE = """To add or update your Shortner Website API,
             
 Ex: `/shortener_api 6LZq851sXofffPHugiKQq`
 
-Current Website: {base_site}
+Current Website: {shortener_site}
 
-To change your Shortener Website: /base_site
+To change your Shortener Website: /shortener_site
 
 Current Shortener API: `{shortener_api}`"""
 

@@ -96,7 +96,7 @@ footer - set footer
 username - set username to replace others
 banner_image - set banner image
 me - know about you
-base_site - change base site
+shortener_site - change shortener site
 include_domain - set include domain
 exclude_domain - set exclude domain
 stats - Stats of the server and bot

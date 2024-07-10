@@ -175,7 +175,7 @@ async def on_callback_query(bot: Client, query: CallbackQuery):
     elif query.data == "start_command":
         new_user = await get_user(query.from_user.id)
         tit = START_MESSAGE.format(
-            query.from_user.mention, new_user["method"], new_user["base_site"]
+            query.from_user.mention, new_user["method"], new_user["shortener_site"]
         )
 
         await query.message.edit(
@@ -198,7 +198,7 @@ async def on_callback_query(bot: Client, query: CallbackQuery):
         )
 
     elif query.data == "method_command":
-        s = METHOD_MESSAGE.format(method=user["method"], shortener=user["base_site"])
+        s = METHOD_MESSAGE.format(method=user["method"], shortener=user["shortener_site"])
         return await query.message.edit(s, reply_markup=METHOD_REPLY_MARKUP)
     elif query.data == "cbatch_command":
         if user_id not in ADMINS:
