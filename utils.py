@@ -106,13 +106,11 @@ async def main_convertor_handler(
     if message.text:
         if user_method in ["shortener", "mdlink"] and "|" in caption:
             regex = r"(?i)\b((?:https?://|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'\".,<>?«»“”‘’]))\s\|\s([a-zA-Z0-9_]){,30}"
-            # Check if the URL part of the caption does not start with "https://t.me"
-            if (custom_alias := re.match(regex, caption)):
-                url = custom_alias[0].split("|")[0].strip()
-                alias = custom_alias[0].split("|")[1].strip()
-                
-                if not url.startswith("https://t.me"):
-                    shortenedText = await method_func(user, url, alias=alias)
+            if custom_alias := re.match(regex, caption):
+                custom_alias = custom_alias[0].split("|")
+                alias = custom_alias[1].strip()
+                url = custom_alias[0].strip()
+                shortenedText = await method_func(user, url, alias=alias)
 
         if edit_caption:
             try:
