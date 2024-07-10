@@ -105,68 +105,17 @@ async def main_convertor_handler(
 
     if message.text:
         if user_method in ["shortener", "mdlink"] and "|" in caption:
-            regex = r"(?i)\b((?:https?://|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'\".,<>?«»“”‘’]))\s\|\s([a-zA-Z0-9_]{1,30})"
-            if custom_alias := re.match(regex, caption):
-                custom_alias = custom_alias[0].split("|")
-                url = custom_alias[0].strip()
-                alias = custom_alias[1].strip()
-
-                # Skip URLs starting with "https://t.me"
-                if not url.startswith("https://t.me"):
-                    shortenedText = await method_func(user, url, alias=alias)
-
-                    if edit_caption:
-                        try:
-                            return await message.edit(
-                                shortenedText, disable_web_page_preview=True, reply_markup=reply_markup
-                            )
-                        except MessageNotModified:
-                            return
-
-                    return await message.reply(
-                        shortenedText,
-                        disable_web_page_preview=True,
-                        reply_markup=reply_markup,
-                        quote=True,
-                        parse_mode=ParseMode.HTML,
-                    )
-
-    elif message.media:
-        if edit_caption:
-            if banner_image and message.photo:
-                return await message.edit_media(media=fileid)
-
-            try:
-                await message.edit_caption(
-                    shortenedText, reply_markup=reply_markup, parse_mode=ParseMode.HTML
-                )
-                return
-            except MessageNotModified:
-                return
-
-        meta = {
-            "caption": shortenedText,
-            "reply_markup": reply_markup,
-            "quote": True,
-            "parse_mode": ParseMode.HTML,
-        }
-        if message.document:
-            return await message.reply_document(document=fileid, **meta)
-
-        elif message.photo:
-            return await message.reply_photo(photo=fileid, **meta)
-
-        elif message.video:
-            return await message.reply_video(video=fileid, **meta)
-'''
-    if message.text:
-        if user_method in ["shortener", "mdlink"] and "|" in caption:
             regex = r"(?i)\b((?:https?://|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'\".,<>?«»“”‘’]))\s\|\s([a-zA-Z0-9_]){,30}"
             if custom_alias := re.match(regex, caption):
                 custom_alias = custom_alias[0].split("|")
                 alias = custom_alias[1].strip()
                 url = custom_alias[0].strip()
                 shortenedText = await method_func(user, url, alias=alias)
+
+
+        # Skip URLs starting with "https://t.me"
+        if not url.startswith("https://t.me"):
+            shortenedText = await method_func(user, url, alias=alias)
 
         if edit_caption:
             try:
@@ -211,7 +160,7 @@ async def main_convertor_handler(
 
         elif message.video:
             return await message.reply_video(video=fileid, **meta)
-'''
+
 
 async def create_inline_keyboard_markup(message: Message, method_func, user):
     if message.reply_markup:
