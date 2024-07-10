@@ -67,7 +67,7 @@
 
 ## Usage
 
-***\*How To Use Me!?***
+***How To Use Me!?***
 
 - -> Send any link or post of links
 
