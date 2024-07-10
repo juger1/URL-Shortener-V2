@@ -21,7 +21,7 @@ Current Method: {}
 Current Shortener: {}</b>
 """
 
-HELP_MESSAGE = """Hey there! My name is {firstname} and I'm a link convertor and shortener bot here to make your work easier and help you earn more 💰.
+HELP_MESSAGE = """<b>Hey there! My name is {firstname} and I'm a link convertor and shortener bot here to make your work easier and help you earn more 💰.
 
 I have a ton of handy features to help you out, such as:
 
@@ -38,13 +38,13 @@ Useful commands:
 
 - /start: Start me up! You probably already used this.
 - /help: Send this message; I'll tell you more about myself!
-- /batch -100xxx: To shorten or convert all posts in your channel
+- /batch -100xxx: To shorten or convert all posts in your channel</b>
 """
 
 ABOUT_TEXT = """
 <b>My Details:
 
-🤖 Name: ** {} **
+🤖 Name: {}
     
 📝 Language: [Python 3](https://www.python.org/)
 🧰 Framework: [Pyrogram](https://github.com/pyrogram/pyrogram)</b>
