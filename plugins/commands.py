@@ -327,7 +327,7 @@ async def shortener_site_handler(bot, m: Message):
     user = await get_user(user_id)
     cmd = m.command
     site = user["shortener_site"]
-    text = f"`/shortener_site (shortener_site)`\n\nCurrent base site: {site}\n\n EX: `/shortener_site shareus.in`\n\nAvailable base sites:\n{avl_web1}\nAnd All alternate sites to droplink.co"
+    text = f"`/shortener_site (shortener_site)`\n\n<b>Current Site:</b> {site}\n\n <b>Example:</b>\n`/shortener_site shareus.in`"
     if len(cmd) == 1:
         return await m.reply(text=text, disable_web_page_preview=True)
     elif len(cmd) == 2:
@@ -335,7 +335,7 @@ async def shortener_site_handler(bot, m: Message):
         if not domain(shortener_site):
             return await m.reply(text=text, disable_web_page_preview=True)
         await update_user_info(user_id, {"shortener_site": shortener_site})
-        await m.reply("<b>Base Site updated successfully</b>")
+        await m.reply("<b>Shortener Site updated successfully</b>")
 
 
 @Client.on_message(filters.command("me") & filters.private)

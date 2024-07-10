@@ -11,14 +11,14 @@ For example: <code>/batch -100xxx</code>
 I'll handle the rest and get those links shortened or converted in a short time! 💪
 """
 
-START_MESSAGE = """Hi there {} 
+START_MESSAGE = """<b>Hi, {} 
 
 Send me a link or post and I'll shorten it for you!
 
 To learn more about what I can do, just type /help.
 
-Method: {}
-Shortener website: {}
+Current Method: {}
+Current Shortener: {}</b>
 """
 
 HELP_MESSAGE = """Hey there! My name is {firstname} and I'm a link convertor and shortener bot here to make your work easier and help you earn more 💰.
@@ -42,15 +42,12 @@ Useful commands:
 """
 
 ABOUT_TEXT = """
-**My Details:**
+<b>My Details:
 
-`🤖 Name:` ** {} **
+🤖 Name: ** {} **
     
-`📝 Language:` [Python 3](https://www.python.org/)
-`🧰 Framework:` [Pyrogram](https://github.com/pyrogram/pyrogram)
-`👨‍💻 Developer:` [Dev](t.me/ask_admin001)
-`📢 Support:` [Talk Bot](https://t.me/ask_admin001)
-`🌐 Source Code:` [GitHub](https://github.com/Tamilupdates/URL-Shortener-V2/)
+📝 Language: [Python 3](https://www.python.org/)
+🧰 Framework: [Pyrogram](https://github.com/pyrogram/pyrogram)</b>
 """
 
 
@@ -154,7 +151,7 @@ BACK_REPLY_MARKUP = InlineKeyboardMarkup(
 USER_ABOUT_MESSAGE = """
 🔧 Here are the current settings for this bot:
 
-- 🌐 Shortener website: {shortener_site}
+- 🌐 Current Shortener: {shortener_site}
 
 - 🧰 Method: {method}
 
