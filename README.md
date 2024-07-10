@@ -36,6 +36,7 @@
 <details>
   <summary>Table of Contents</summary>
   <ol>
+    <li><a href="#deploy">Deploy</a></li>
     <li><a href="#description">Description</a></li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#commands">Commands</a></li>
@@ -47,11 +48,8 @@
         <li><a href="#optional-variables">Optional Variables</a></li>
       </ul>
       </li>
-    <li><a href="#deploy">Deploy</a></li>
     <li><a href="#tech-stack">Tech Stack</a></li>
-    <li><a href="#support">Support</a></li>
     <li><a href="#disclaimer">Disclaimer</a></li>
-    <li><a href="#credits">Credits</a></li>
   </ol>
 </details>
 
