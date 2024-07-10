@@ -25,7 +25,7 @@ After Setting Up, You will get this in your sidebar. Click on done
 
 
 ### 5. Add Environment variables
-Add Environment variables. Refer [https://github.com/kevinnadar22/URL-Shortener-V2/wiki/About](https://github.com/kevinnadar22/URL-Shortener-V2/wiki/About)
+Add Environment variables. Refer [https://github.com/Tamilupdates/URL-Shortener-V2/wiki/About](https://github.com/Tamilupdates/URL-Shortener-V2/wiki/About)
 ![Step 5 screenshot](https://images.tango.us/public/screenshot_d67cd814-721a-4afb-9f74-47972d0c389b.png?crop=focalpoint&fit=crop&fp-x=0.0182&fp-y=0.2463&fp-z=2.9073&w=1200&mark-w=0.2&mark-pad=0&mark64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n&ar=3840%3A2002)
 
 

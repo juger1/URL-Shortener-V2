@@ -14,7 +14,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/kevinnadar22/URL-Shortener-V2">
+  <a href="https://github.com/Tamilupdates/URL-Shortener-V2">
     <img src="https://i.ibb.co/1mwchh9/Screenshot-2022-07-08-at-11-06-34-AM.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -26,11 +26,11 @@
     ·
     <a href="https://www.telegram.dog/ask_admin001">Report Bug</a>
     ·
-    <a href="https://github.com/kevinnadar22/URL-Shortener-V2#features">Features</a>
+    <a href="https://github.com/Tamilupdates/URL-Shortener-V2#features">Features</a>
     ·
-    <a href="https://github.com/kevinnadar22/URL-Shortener-V2#deploy">Deploy</a>
+    <a href="https://github.com/Tamilupdates/URL-Shortener-V2#deploy">Deploy</a>
     ·
-    <a href="https://github.com/kevinnadar22/URL-Shortener-V2#required-variables">Variables</a>
+    <a href="https://github.com/Tamilupdates/URL-Shortener-V2#required-variables">Variables</a>
   </p>
 </div>
 
@@ -75,7 +75,7 @@
 
 - -> Add me to your channel as admin with full previlages to convert channel's post
 
-> For more information about usages, see the [documentation](https://github.com/kevinnadar22/URL-Shortener-V2/wiki/Usage)
+> For more information about usages, see the [documentation](https://github.com/Tamilupdates/URL-Shortener-V2/wiki/Usage)
 
 ## Commands
 
@@ -133,7 +133,7 @@ info - get user info
 
 ### Optional Variables
 
-> For more information about optional variables see the [wiki documentation](https://github.com/kevinnadar22/URL-Shortener-V2/wiki/About#optional-variables)
+> For more information about optional variables see the [wiki documentation](https://github.com/Tamilupdates/URL-Shortener-V2/wiki/About#optional-variables)
 
 ## Deploy
 
@@ -142,7 +142,7 @@ You can deploy this bot anywhere.
 |                                                        | Name                 | Deploy                                                                                                                                                                                                                             |
 | ------------------------------------------------------ | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ![Replit](assets/img/replit.jpg)                       | Replit (Recommended) | [See Guide](/guides/replit.md)                                                                                                                                                                                                     |
-| [![Heroku](assets/img/heroku.png)](https://heroku.com) | Heroku               | [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/kevinnadar22/URL-Shortener-V2)                                                                                      |
+| [![Heroku](assets/img/heroku.png)](https://heroku.com) | Heroku               | [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Tamilupdates/URL-Shortener-V2)                                                                                      |
 | ![Koyeb](assets/img/koyeb.png)                         | Koyeb                | [![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/apps/deploy?type=git&repository=kevinnadar22/url-shortener-v2&name=url-shortener-v2&run_command=python3%20-m%20main&branch=main) |
 | ![VPS](assets/img/vps.png)                             | VPS                  | [See Guide](/guides/vps.md)                                                                                                                                                                                                        |
 
@@ -151,20 +151,3 @@ You can deploy this bot anywhere.
 **Language:** [Python](https://www.python.org/) 3.10.2
 
 **Library:** [Pyrogram](https://github.com/pyrogram/pyrogram) 2.0.30
-
-## Support
-
-Contact Our [DEV](https://www.telegram.dog/ask_admin001) For Support/Assistance
-
-Report Bugs, Give Feature Requests There..  
-Do Fork And Star The Repository If You Liked It.
-
-## Disclaimer
-
-[![GNU Affero General Public License v3.0](https://www.gnu.org/graphics/agplv3-155x51.png)](https://www.gnu.org/licenses/agpl-3.0.en.html#header)  
-Licensed under [GNU AGPL v3.0.](LICENSE)
-Selling The Codes To Other People For Money Is _Strictly Prohibited_.
-
-## Credits
-
-- [Thanks To Me](https://github.com/Kevinnadar22)
