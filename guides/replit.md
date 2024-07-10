@@ -9,7 +9,7 @@ __Source:__ [Tango](https://app.tango.us/app/workflow/ef1fe747-d009-42ba-95e4-0f
 
 ### Create a [Replit.com](https://replit.com) account to continue with the tutorial
 
-### 1. [Go to Create a new Repl - Replit](https://replit.com/github/kevinnadar22/url-shortener-v2)
+### 1. [Go to Create a new Repl - Replit](https://replit.com/github/tamilupdates/url-shortener-v2)
 
 
 ### 2. Click on Import from GitHub
