@@ -94,7 +94,7 @@ async def batch_handler(c: Client, m: CallbackQuery):
 
         start_time = datetime.datetime.now()
         txt = await m.message.edit(
-            text=f"Batch Shortening Started!\n\n Channel: {channel_id}\n\nTo Cancel /cancel",
+            text=f"Batch Shortening Started!\n\nChannel: {channel_id}\n\nTo Cancel /cancel",
         )
         logger.info(f"Batch Shortening Started for {channel_id}")
 

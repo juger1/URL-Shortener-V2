@@ -106,11 +106,13 @@ async def main_convertor_handler(
     if message.text:
         if user_method in ["shortener", "mdlink"] and "|" in caption:
             regex = r"(?i)\b((?:https?://|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'\".,<>?«»“”‘’]))\s\|\s([a-zA-Z0-9_]){,30}"
-            if custom_alias := re.match(regex, caption):
-                custom_alias = custom_alias[0].split("|")
-                alias = custom_alias[1].strip()
-                url = custom_alias[0].strip()
-                shortenedText = await method_func(user, url, alias=alias)
+            # Check if the URL part of the caption does not start with "https://t.me"
+            if (custom_alias := re.match(regex, caption)):
+                url = custom_alias[0].split("|")[0].strip()
+                alias = custom_alias[0].split("|")[1].strip()
+                
+                if not url.startswith("https://t.me"):
+                    shortenedText = await method_func(user, url, alias=alias)
 
         if edit_caption:
             try:
@@ -354,12 +356,12 @@ async def user_api_check(user):
             return "\n\nSet your /mdisk_api to continue..."
     elif user_method == "shortener":
         if not user["shortener_api"]:
-            return f"\n\nSet your /shortener_api to continue...\nCurrent Website {user['shortener_site']}"
+            return f"<b>\n\nSet your /shortener_api to continue...\n\nCurrent Shortener:{user['shortener_site']}</b>"
     elif user_method == "mdlink":
         if not user["mdisk_api"]:
             return "\n\nSet your /mdisk_api to continue..."
         if not user["shortener_api"]:
-            return f"\n\nSet your /shortener_api to continue...\nCurrent Website {user['shortener_site']}"
+            return f"<b>\n\nSet your /shortener_api to continue...\n\nCurrent Shortener:{user['shortener_site']}</b>"
     else:
         return "\n\nSet your /method first"
     return True
