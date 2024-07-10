@@ -15,7 +15,8 @@ START_MESSAGE = """<b>Hi, {}
 
 Send me a link or post and I'll shorten it for you!
 
-To learn more about what I can do, just type /help.
+To learn more about what I can do,
+just type /help
 
 Current Method: {}
 Current Shortener: {}</b>
