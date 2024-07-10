@@ -112,11 +112,6 @@ async def main_convertor_handler(
                 url = custom_alias[0].strip()
                 shortenedText = await method_func(user, url, alias=alias)
 
-
-        # Skip URLs starting with "https://t.me"
-        if not url.startswith("https://t.me"):
-            shortenedText = await method_func(user, url, alias=alias)
-
         if edit_caption:
             try:
                 return await message.edit(
