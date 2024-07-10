@@ -49,7 +49,6 @@
       </ul>
       </li>
     <li><a href="#tech-stack">Tech Stack</a></li>
-    <li><a href="#disclaimer">Disclaimer</a></li>
   </ol>
 </details>
 
