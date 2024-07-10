@@ -43,7 +43,7 @@
     },
     "DATABASE_NAME": {
       "description": "Name of the database",
-      "value": "MdiskConvertor",
+      "value": "URLShortenerBotV2",
       "required": false
     },
     "DATABASE_URL":{
