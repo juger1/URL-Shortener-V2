@@ -123,8 +123,8 @@ info - get user info
 - [x] Batch Support
 - [x] Multiple Methods Available
 - [x] Bypass Shortener Links
-- [x] [Hyperlink Support](https://example.com/)
-- [x] [Request Features](https://t.me/ask_admin001)
+- [x] Hyperlink Support
+- [x] Request Features
 
 ### Required Variables
 
