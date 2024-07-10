@@ -59,6 +59,17 @@
 
 ---
 
+## Deploy
+
+You can deploy this bot anywhere.
+
+|                                                        | Name                 | Deploy                                                                                                                                                                                                                             |
+| ------------------------------------------------------ | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![Replit](assets/img/replit.jpg)                       | Replit (Recommended) | [See Guide](/guides/replit.md)                                                                                                                                                                                                     |
+| [![Heroku](assets/img/heroku.png)](https://heroku.com) | Heroku               | [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Tamilupdates/URL-Shortener-V2)                                                                                      |
+| ![Koyeb](assets/img/koyeb.png)                         | Koyeb                | [![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/apps/deploy?type=git&repository=tamilupdates/url-shortener-v2&name=url-shortener-v2&run_command=python3%20-m%20main&branch=main) |
+| ![VPS](assets/img/vps.png)                             | VPS                  | [See Guide](/guides/vps.md)                                                                                                                                                                                                        |
+
 ## Description
 
 > **Now this bot can be used by users also. Only admin has access to channel support. Bot Owner API will be used in channel post converting. You can restrict users from using this bot by setting env `IS_PRIVATE` to True**
@@ -133,16 +144,6 @@ info - get user info
 
 > For more information about optional variables see the [wiki documentation](https://github.com/Tamilupdates/URL-Shortener-V2/wiki/About#optional-variables)
 
-## Deploy
-
-You can deploy this bot anywhere.
-
-|                                                        | Name                 | Deploy                                                                                                                                                                                                                             |
-| ------------------------------------------------------ | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![Replit](assets/img/replit.jpg)                       | Replit (Recommended) | [See Guide](/guides/replit.md)                                                                                                                                                                                                     |
-| [![Heroku](assets/img/heroku.png)](https://heroku.com) | Heroku               | [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Tamilupdates/URL-Shortener-V2)                                                                                      |
-| ![Koyeb](assets/img/koyeb.png)                         | Koyeb                | [![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/apps/deploy?type=git&repository=tamilupdates/url-shortener-v2&name=url-shortener-v2&run_command=python3%20-m%20main&branch=main) |
-| ![VPS](assets/img/vps.png)                             | VPS                  | [See Guide](/guides/vps.md)                                                                                                                                                                                                        |
 
 ## Tech Stack
 
