@@ -63,13 +63,11 @@
 
 > **Now this bot can be used by users also. Only admin has access to channel support. Bot Owner API will be used in channel post converting. You can restrict users from using this bot by setting env `IS_PRIVATE` to True**
 
-**This Is Just An Simple Advance Shortener and Converter Bot Completely Rewritten Version Of [URL Shortener](https://github.com/t2links/URL-Shortener-bot)**
-
 **Just Send Any Link To Short. It Will Short Link or Save it to your MDisk Account**
 
 ## Usage
 
-\***\*How To Use Me!?\*\***
+***\*How To Use Me!?***
 
 - -> Send any link or post of links
 
