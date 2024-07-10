@@ -24,8 +24,6 @@
     A Shortener and Convertor Bot
     <br />
     ·
-    <a href="https://www.telegram.dog/ask_admin001">Report Bug</a>
-    ·
     <a href="https://github.com/Tamilupdates/URL-Shortener-V2#features">Features</a>
     ·
     <a href="https://github.com/Tamilupdates/URL-Shortener-V2#deploy">Deploy</a>
