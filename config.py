@@ -2,7 +2,7 @@ import os
 
 from dotenv import load_dotenv
 
-load_dotenv()
+load_dotenv('config.env', override=True)
 
 
 def is_enabled(value, default):
