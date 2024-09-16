@@ -9,4 +9,4 @@ fi
 cd /URL-Shortener-V2
 pip3 install -U -r requirements.txt
 echo "Starting Bot...."
-python3 main.py
+python3 get_config.py && python3 main.py
