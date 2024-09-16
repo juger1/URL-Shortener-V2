@@ -10,3 +10,4 @@ aiofiles
 validators
 python-dotenv
 uvloop
+python-dotenv
