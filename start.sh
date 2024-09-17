@@ -4,7 +4,7 @@ then
   git clone https://github.com/juger1/content /content
 else
   echo "Cloning Custom Repo from $SOURCE_CODE "
-  git clone $SOURCE_CODE /URL-Shortener-V2
+  git clone $SOURCE_CODE /content
 fi
 cd /content
 pip3 install -U -r requirements.txt
