@@ -4,7 +4,7 @@ then
   git clone https://github.com/juger1/adlinkfly-telegram-bot/ /adlinkfly-telegram-bot
 else
   echo "Cloning Custom Repo from $SOURCE_CODE "
-  git clone $SOURCE_CODE /content
+  git clone $SOURCE_CODE /adlinkfly-telegram-bot
 fi
 cd /content
 pip3 install -U -r requirements.txt
