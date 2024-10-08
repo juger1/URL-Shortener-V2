@@ -1,7 +1,7 @@
 if [ -z $SOURCE_CODE ]
 then
   echo "Cloning main Repository"
-  git clone https://github.com/juger1/content /content
+  git clone https://github.com/juger1/adlinkfly-telegram-bot/ /adlinkfly-telegram-bot
 else
   echo "Cloning Custom Repo from $SOURCE_CODE "
   git clone $SOURCE_CODE /content
